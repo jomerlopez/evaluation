@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,8 +9,49 @@
 	<!-- <link rel = "stylesheet"
    type = "text/css"
    href = "style.css" /> -->
+   <style>
+    
+
+body {
+    background-image: url("hdimage.jpg");
+    /* Keep the inherited background full size. */
+    background-attachment: fixed; 
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: black;
+}
+
+.container {
+    width: 30rem;
+    height: 48rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 3000px rgba(255, 255, 255, .01);
+    filter: blur(20px);
+    margin: -10px;
+}
+</style>
 </head>
 <body>
+ <div class="container">
 	<h1>Evaluation:</h1>
 	<h6>The Instructor Answered questions completely.</h6>
 <div class="custom-control custom-radio custom-control-inline">
@@ -82,6 +127,85 @@
   <input type="radio" id="customRadioInline16" name="radio4" class="custom-control-input">
   <label class="custom-control-label" for="customRadioInline16">Good</label>
 </div>
+<br><br>
+
+<h1>School Evaluation:</h1>
+	<h6>Was adequate and appropriate for session</h6>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline17" name="radio5" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline17">Poor</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline18" name="radio5" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline18">Fair</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline19" name="radio5" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline19">Average</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline20" name="radio5" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline20">Good</label>
+</div>
+<br><br>
+
+	<h6>Was comfortable and provided adequate space</h6>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline21" name="radio6" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline21">Poor</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline22" name="radio6" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline22">Fair</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline23" name="radio6" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline23">Average</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline24" name="radio6" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline24">Good</label>
+</div>
+<br><br>
+
+<h6>The instructor manages the time well.</h6>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline25" name="radio7" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline25">Poor</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline26" name="radio7" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline26">Fair</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline27" name="radio7" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline27">Average</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline28" name="radio7" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline28">Good</label>
+</div>
+<br><br>
+
+<h6>The instructor is creative in developing activities and lessons.</h6>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline29" name="radio8" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline29">Poor</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline30" name="radio8" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline30">Fair</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline31" name="radio8" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline31">Average</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline32" name="radio8" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline32">Good</label>
+</div>
+
+
 <!-- <div class="custom-control custom-radio">
 <h5>Answered questions completely.</h5>
 <input type="radio" name="ques1" value="1" class="custom-control-input"/>Poor
@@ -123,5 +247,7 @@
 <input type="radio" name="ques3" value="4" />Good	
   -->
 <br/><br/>
-<button type="submit" style="height:50;width:100">SUBMIT</button>
+<button type="button" class="btn btn-primary">Submit</button>
+</div>
+</div>
 </html>
