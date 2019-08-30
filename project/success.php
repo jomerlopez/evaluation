@@ -11,13 +11,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body style="background-color: #28B8B6">
-
-    <div class="container">
+<style>
+    .container{
+        text-align: center;
+        border: 5px solid black; padding: 50px 60px;
+        margin-top: 25vh;
+    }
+</style>
+<body>
+    <div class="container col-lg-8">
+    
     <h1>Congratulation <?php echo $firstname; ?></h1>
-    </div>
+    
     
     <p>You have Successfully Created an Account!click here <a href="login.php">log in</a></p>
-    
+    </div>
 </body>
+    
 </html>

@@ -13,7 +13,7 @@
     
 
 body {
-    background-image: url("hdimage.jpg");
+    background-image: url("global/hd5.jpg");
     /* Keep the inherited background full size. */
     background-attachment: fixed; 
     background-size: cover;
@@ -247,7 +247,7 @@ body {
 <input type="radio" name="ques3" value="4" />Good	
   -->
 <br/><br/>
-<button type="button" class="btn btn-primary">Submit</button>
+<button type="button" class="btn btn-success btn-lock">Submit</button>
 </div>
 </div>
 </html>
